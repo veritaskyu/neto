@@ -1,0 +1,36 @@
+# Eclipse project files
+.project
+.classpath
+.settings
+
+# IntelliJ IDEA project files and directories
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# gradle directory
+.gradle
+gradle.properties
+# gradlew
+# gradlew.bat
+# gradle/
+
+# Build
+build/
+
+# Build targets
+/target
+*/target
+
+# Mac-specific directory that no other operating system needs.
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# JVM crash logs
+hs_err_pid*.log
+
+#auth
+*.jks

@@ -1,0 +1,23 @@
+group 'com.veritasware.neto'
+version "${netoSessionServerVersion}"
+
+ext {
+    startClassName = 'com.veritasware.neto.session.SessionServerStarter'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "${startClassName}"
+    }
+}
+
+apply plugin: 'application'
+
+mainClassName = "${startClassName}"
+
+dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
+
+}

@@ -1,0 +1,25 @@
+channelServer:
+  debug: true
+  messagePackage: com.veritasware.neto.codec.json.message
+  hostCheckUrl: http://localhost/getRemoteAddr
+  unificationMode: false
+  socketBacklog: 512
+  bossThreadCount: 1
+  workerThreadCount: 20
+  bindPortRandom: false
+  bindPort: 12020
+  charset: UTF-8
+  idleTimeoutMilliSeconds: 3000
+  maxFrameLength: 65536
+  channel:
+    limit: 2
+
+zookeeper:
+  host: 127.0.0.1:2181
+
+redis:
+  rootPrefix: neto
+  channelPrefix: channels
+  host: 127.0.0.1
+  port: 6379
+  password: password12#

@@ -1,0 +1,16 @@
+server:
+  port: 12345
+
+neto:
+  channel:
+    limit: 500
+
+zookeeper:
+  host: 127.0.0.1:2181
+
+redis:
+  rootPrefix: neto
+  channelPrefix: channels
+  host: 127.0.0.1
+  port: 6379
+  password: password12#

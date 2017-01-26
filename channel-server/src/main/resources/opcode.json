@@ -1,0 +1,10 @@
+{
+  "HeartbeatMessage"   : 1000,
+  "ChatMessage"        : 1001,
+  "LoginMessage"       : 1002,
+  "DisconnectMessage"  : 1003,
+  "EnterRoomMessage"   : 1004,
+  "ErrorMessage"       : 1005,
+  "LeaveRoomMessage"   : 1006,
+  "RoomListAllMessage" : 1007
+}

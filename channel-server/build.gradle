@@ -1,0 +1,24 @@
+group 'com.veritasware.neto'
+version "${netoChannelServerVersion}"
+
+ext {
+    startClassName = 'com.veritasware.neto.channel.ChannelServerStarter'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "${startClassName}"
+    }
+}
+
+apply plugin: 'application'
+
+mainClassName = "${startClassName}"
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: "${springBootVersion}"
+    compile group: 'org.springframework', name: 'spring-web', version: "${springVersion}"
+
+    compile project(':neto-common')
+}
+//compileJava.dependsOn(processResources)

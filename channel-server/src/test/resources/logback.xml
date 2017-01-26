@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}][%-5level][%logger{36}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--<appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<file>${app-root}/${app-name}.log</file>-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; rollover daily &ndash;&gt;-->
+            <!--<fileNamePattern>${app-root}/%d{yyyyMMdd}_${app-name}_%i.log</fileNamePattern>-->
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+                <!--<maxFileSize>100MB</maxFileSize>-->
+            <!--</timeBasedFileNamingAndTriggeringPolicy>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder>-->
+            <!--<pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}][%-5level] %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+    <logger name="com.veritasware.neto.channel" level="debug" additivity="false">
+        <!--<appender-ref ref="ROLLING"/>-->
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <root level="debug">
+       <!--<appender-ref ref="ROLLING"/>-->
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

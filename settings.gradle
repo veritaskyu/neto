@@ -1,0 +1,5 @@
+rootProject.name = 'neto'
+include 'channel-server', 'session-server'
+include 'neto-common'
+//include 'channel-client'
+
